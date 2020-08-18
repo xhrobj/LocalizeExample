@@ -1,0 +1,11 @@
+/* 
+  Localizable.strings
+  LocalizeExample
+
+*/
+
+"GREETING_TEXT" = "Привет";
+
+"TODAY_TEXT" = "Сегодня";
+
+"DISTANCE_TEXT" = "Расстояние от Москвы до Сочи";
