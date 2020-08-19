@@ -17,8 +17,10 @@ extension Array {
 
 extension String {
     func localized(_ locale: Locale? = Locale.current) -> String {
-        let path = Bundle.main.path(forResource: locale?.languageCode, ofType: "lproj")!
-        let bundle = Bundle(path: path)!
-        return NSLocalizedString(self, bundle: bundle, comment: "")
+        if let path = Bundle.main.path(forResource: locale?.languageCode, ofType: "lproj"),
+           let bundle = Bundle(path: path) {
+            return NSLocalizedString(self, bundle: bundle, comment: "")
+        }
+        return NSLocalizedString(self, comment: "")
     }
 }
